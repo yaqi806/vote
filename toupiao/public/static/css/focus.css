@@ -1,0 +1,84 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-size: .14rem;
+	font-family: "微软雅黑";
+	background-color: #e4e4e4;
+}
+a{text-decoration: none;}
+ul,ol{list-style: none;}
+.fl{float: left;}
+.fr{float: right;}
+.top{
+	width: 100%;
+	height: .92rem;
+	text-align: center;
+	line-height: .92rem;
+	font-size: .32rem;
+	background-color: #ff5c5c;
+	color: #FFFFFF;
+	letter-spacing: .02rem;
+	padding-right: .21rem;
+}
+.top i{
+	width: .21rem;
+	height: .36rem;
+	background:url(../img/fanhui.png);
+	background-size: 100% 100%;
+	display: inline-block;
+	margin-top: .30rem;
+	margin-left: .30rem;
+}
+.ewm{
+	width: 6.54rem;
+	height: 8.84rem;
+	background-color: white;
+	margin: 1.57rem auto;
+	border-radius: .20rem;
+}
+.ewm p{
+	width: 3.35rem;
+	height: 1rem;
+	margin: 1.05rem 1.65rem;
+	display:inline-block;
+	font-size: .37rem;
+	text-align: center;
+	line-height: .50rem;
+	color: #b0b0b0;
+}
+.ewm img{
+	width: 4.85rem;
+	height: 4.85rem;
+	margin-left: .82rem;
+}
+.nav{
+	width: 100%;
+	height: 1rem;
+	
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+}
+.nav ul{
+	width: 100%;
+	height: 1rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: .20rem;
+}
+.nav li{
+	text-align: center;
+	
+}
+.nav li img{
+	width: .45rem;
+	height: .45rem;
+}
+.nav li a{
+	color: #333;
+}

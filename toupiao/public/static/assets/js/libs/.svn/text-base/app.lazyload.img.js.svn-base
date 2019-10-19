@@ -1,0 +1,50 @@
+/**
+ *@description 将网络图片下载到本地并显示，包括缓存
+ */
+(function (app, $) {
+
+    var makeArray = function (obj) {
+        var res = [];
+        for (var i = 0, len = obj.length; i < len; i++) {
+            res.push(obj[i]);
+        }
+        return res;
+    }
+
+    function lazyLoad(doc, cb) {
+        var imgs;
+        if (app.lazyImg.pageno) {
+            imgs = doc.querySelectorAll("img[data-pageno='" + app.lazyImg.pageno + "']");
+        } else {
+            imgs = doc.querySelectorAll('img.lazy');
+        }
+
+        app.asynBlock(/*makeArray(imgs)*/ $.slice.call(imgs), function (img, next) {
+            var data_src = img.getAttribute('data-src');
+            //console.log("data_src: "+data_src);
+            if (data_src && data_src.indexOf('http://') >= 0) {
+                app.cache.getFile(data_src, function (localUrl) {
+                    setPath(img, localUrl);
+                    next();
+                });
+            } else {
+                next();
+            }
+        }, function () {
+            cb && cb();
+        });
+
+    };
+
+    function setPath(img, src) {
+        img.setAttribute('src', src);
+        img.classList.remove("lazy");
+    };
+
+    app.lazyImg = {
+        lazyLoad: function (doc, cb) {
+            lazyLoad(doc ? doc : document, cb);
+        },
+        pageno: null
+    };
+})(app, mui);

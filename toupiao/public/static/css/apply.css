@@ -1,0 +1,267 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-size: .14rem;
+	font-family: "微软雅黑";
+}
+a{text-decoration: none;}
+ul,ol{list-style: none;}
+.fl{float: left;}
+.fr{float: right;}
+.banner{
+	width: 100%;
+	height: 2.45rem;
+	border-radius: .1rem;
+	padding: .30rem;
+}
+.banner img{
+	width: 100%;
+	height: 100%;
+	border-radius: .1rem;
+}
+.content{
+	/*width: 4.85rem;
+	height: 3.45rem;
+	margin: .20rem auto;
+	font-size: .30rem;*/
+}
+.content input{
+	width: 3.90rem;
+	height: .50rem;
+	border: .01rem solid #000000;
+	outline: none;
+	margin-bottom: .37rem;
+	text-indent: .15rem;
+}
+.content input:nth-child(3){
+	width: 1.5rem;
+	height: .45rem;
+	border: none;
+	text-align: center;
+	line-height: .45rem;
+	padding-right: .20rem;
+	
+}
+.content select{
+	width: 3.53rem;
+	height: .55rem;
+	text-indent: .20rem;
+	outline: none;
+}
+.content select option{
+	outline: none;
+	border: .01rem solid #000000;
+}
+/*button{
+	width: 1.78rem;
+	height: .83rem;
+	border:.01rem solid #000000;
+	background-color: white;
+	font-size: .32rem;
+	float: right;
+	margin-top: 1rem;
+	cursor: pointer;
+	margin-right: .30rem;
+	outline: none;
+}*/
+.mask{
+	width: 100%;
+	height:100%;
+	background-color: rgba(0,0,0,.3);
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.mask .mask_in{
+	width: 4.44rem;
+	height: 3.20rem;
+	background-color: white;
+	position: absolute;
+	top: 0;left: 0;right: 0;bottom: 0;
+	margin: auto;
+	border-radius: .05rem;
+	text-align: center;
+	display: none;
+	
+}
+.mask .mask_in img{
+	width: .70rem;
+	height: .70rem;
+	margin-top: .30rem;
+	
+}
+.mask .mask_in .p1{
+	font-size: .30rem;
+	margin-top: .20rem;
+	color: #000;
+	
+}
+.mask .mask_in .p2{
+	font-size: .20rem;
+	color: #999999;
+	margin-top: .1rem;
+}
+.mask .mask_in a{
+	width: 1.52rem;
+	height: .47rem;
+	border: .01rem solid #000000;
+	display: inline-block;
+	font-size: .24rem;
+	text-align: center;
+	line-height: .47rem;
+	color: #000;
+	margin-top: .25rem;
+}
+.mask .mask_in .cha{
+	font-size: .5rem;
+	position: absolute;
+	top: 0;
+	right: .2rem;
+	cursor: pointer;
+}
+
+
+
+
+
+/*新增样式*/
+.content{
+	width:100%;
+	font-size: .30rem;
+}
+.content span.title{
+	display: inline-block;
+	width:130px;
+	text-align: right;
+}
+.content .pic{
+	display: flex;
+}
+.content .pic .picNr{
+	display: inline-block;
+	width:60%;
+}
+
+.content input[type=text]{
+	width:214px; height: 28px;
+	border:solid 1px #aaa;
+	border-radius: 5px;
+}
+.content label{
+	display: inline-block;
+	width:214px; height: 28px;
+	background-color: #f7fece;
+	border:solid 1px #aaa;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	text-align: center;
+	line-height: 28px;
+	font-size: 0.2rem;
+}
+.content input[type=file]{
+	display: none;
+}
+.content .pic{
+	margin-bottom: 10px;
+	display: none;
+}
+.content .pic img{
+	border:dashed 1px #aaa;
+	margin-bottom: 5px;
+}
+.content select{
+	width:214px; height: 28px;
+	border:solid 1px #aaa;
+	border-radius: 5px;
+}
+button.tj{
+	display: block;
+	width:80%;
+	height: .73rem;
+	border:.02rem solid #aaa;
+	background-color: white;
+	font-size: .32rem;
+	outline: none;
+	margin:50px auto;
+	border-radius: 10px;
+}
+.mask1{
+	width: 100%;
+	height:100%;
+	background-color: rgba(0,0,0,.3);
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+}
+.mask1 .mask_in1{
+	width: 4.44rem;
+	height: 3.20rem;
+	background-color: white;
+	position: absolute;
+	top: 0;left: 0;right: 0;bottom: 0;
+	margin: auto;
+	border-radius: .05rem;
+	text-align: center;
+	display: none;
+	
+}
+.mask1 .mask_in1 img{
+	width: .70rem;
+	height: .70rem;
+	margin-top: .30rem;
+	
+}
+.mask1 .mask_in1 .p1{
+	font-size: .30rem;
+	margin-top: .20rem;
+	color: #000;
+	
+}
+.mask1 .mask_in1 .p2{
+	font-size: .20rem;
+	color: #999999;
+	margin-top: .1rem;
+}
+.mask1 .mask_in1 a{
+	width: 1.52rem;
+	height: .47rem;
+	border: .01rem solid #000000;
+	display: inline-block;
+	font-size: .24rem;
+	text-align: center;
+	line-height: .47rem;
+	color: #000;
+	margin-top: .25rem;
+}
+.mask1 .mask_in1 .cha{
+	font-size: .5rem;
+	position: absolute;
+	top: 0;
+	right: .2rem;
+	cursor: pointer;
+}
+
+
+.tp{
+	display: inline-block;
+	position: relative;
+	width:60px; height: 60px;
+	margin-right: 14px;
+}
+
+.tp .close{
+	width:20px; height: 20px;
+	display: inline-block;
+	border:solid 1px #aaa;
+	border-radius: 50%;
+	position: absolute;
+	top:-10px; right:-10px;
+	text-align: center;
+	line-height: 16px;
+	background-color: #fff;
+}

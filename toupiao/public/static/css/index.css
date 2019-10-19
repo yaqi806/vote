@@ -1,0 +1,529 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+input{
+	outline: none;
+	padding-left: .2rem;
+}
+.left{float: left;}
+.right{float: right;}
+a{text-decoration: none;}
+ul,ol{list-style: none;}
+
+
+/*index.html*/
+/*top*/
+.top{
+	width: 100%;
+	height: .1rem;
+	line-height: .85rem;
+	text-align: center;
+	font-size: .36rem;
+	font-weight: bold;
+	padding-left: .8rem;
+}
+
+
+/*banner*/
+.banner{
+	width: auto;
+	height: 3.7rem;
+}
+.banner_ul{
+	width: 100%;
+	height: 3.4rem;
+}
+.banner_ul li{
+	text-align:center;
+	width: inherit;
+	height: inherit;
+	display: none;
+	background: black;
+}
+.banner_ul li img{
+	width: auto;
+	height: 100%;
+}
+.banner .banner_ul li.one_img{
+	display: block;
+}
+.banner_ol{
+	width: 1.18rem;
+	height: .3rem;
+	margin: 0 auto;
+	padding-top: .09rem;
+}
+.banner_ol li{
+	width: .12rem;
+	height: .12rem;
+	float: left;
+	margin-right: .41rem;
+	border:.03rem solid #333;
+	border-radius: 50%;
+}
+.banner_ol li:nth-child(3){
+	margin-right: 0;
+}
+.banner .banner_ol li.one_li{
+	border: .03rem solid #f39800;
+}
+.banner2{
+	width: 100%;
+	height: 3.7rem;
+}
+.banner_ul2{
+	width: 100%;
+	height: 3.4rem;
+}
+.banner_ul2 li{
+	text-align:center;
+	width: inherit;
+	height: inherit;
+	display: none;
+	background: black;
+}
+.banner_ul2 li img{
+	width: 100%;
+	height: 100%;
+}
+.banner2 .banner_ul2 li.one_img{
+	display: block;
+}
+.banner_ol{
+	width: 1.18rem;
+	height: .3rem;
+	margin: 0 auto;
+	padding-top: .09rem;
+}
+.banner_ol li{
+	width: .12rem;
+	height: .12rem;
+	float: left;
+	margin-right: .41rem;
+	border:.03rem solid #333;
+	border-radius: 50%;
+}
+.banner_ol li:nth-child(3){
+	margin-right: 0;
+}
+.banner .banner_ol li.one_li{
+	border: .03rem solid #f39800;
+}
+
+/*累计投票、访问人次*/
+.count{
+	width: 100%;
+	height: 1.68rem;
+	margin-top: .25rem;
+	padding: 0 .17rem;
+}
+.count_box{
+	width: 3.48rem;
+	height: inherit;
+	font-size: .32rem;
+	text-align: center;
+	color: #fff;
+	padding-top: .49rem;
+	background: #4048f4;
+	border-radius: .1rem;
+}
+
+/*活动时间*/
+.active_time{
+	width: 100%;
+	height: .84rem;
+	line-height: .84rem;
+	padding: 0 .17rem;
+	font-size: .26rem;
+}
+.active_time p a{
+	color: #000;
+}
+/*参赛选手*/
+.player{
+	width: 6.97rem;
+	height: auto;
+	margin: auto;
+	margin-bottom: 1.5rem;
+}
+.player_ul{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.player_ul1{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.player_ul1 li{
+	width: 3.39rem;
+	height: 4.6rem;
+	margin-bottom: .25rem;
+}
+.player_ul li{
+	width: 3.39rem;
+	height: 4.6rem;
+	margin-bottom: .25rem;
+}
+.player_img{
+	width: 100%;
+	height: 3.24rem;
+}
+.player_img img{
+	width: 100%;
+	height: 100%;
+	border:solid 1px #d6d6d6 ;
+	border-bottom: none;
+}
+.player_name{
+	width: 100%;
+	height: 1.35rem;
+	padding:0 .21rem;
+	border: .01rem solid #d6d6d6;
+	border-top: transparent;
+	margin-top: -.05rem;
+}
+.player1{
+	width: 100%;
+	height: .5rem;
+	line-height: .5rem;
+	font-size: .26rem;
+	font-weight: bold;
+	color: #333;
+}
+.player2,.player3{
+	width: 100%;
+	height: .25rem;
+	line-height: .25rem;
+	font-size: .23rem;
+	color: #adadad;
+	margin-bottom: .13rem;
+}
+.player3{
+	margin-bottom: 0;
+}
+
+
+/*投票记录*/
+/*vote.html*/
+.top_vote{
+	 width: 100%;
+	 height: .92rem;
+	 text-align: center;
+	 line-height: .92rem;
+	 font-size: .32rem;
+	 background-color: #ff5c5c;
+	 color: #FFFFFF;
+	 letter-spacing: .02rem;
+	 padding-right: .21rem;
+}
+.top_vote i{
+ width: .21rem;
+ height: .36rem;
+ background:url(../img/fanhui.png);
+ background-size: 100% 100%;
+ display: inline-block;
+ margin-top: .30rem;
+ margin-left: .30rem;
+ 
+}
+.vote_box{
+	width: 100%;
+	height: 3.6rem;
+	position: relative;
+}
+.vote_img{
+	width: 100%;
+	height: 3.38rem;
+	position: relative;
+}
+.vote_img img{
+	width: 100%;
+	height: 100%;
+}
+.vote_name{
+	width:4.35rem;
+	height:2.45rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: .5rem;
+	margin: auto;
+}
+.vote_head{
+	width: 1.6rem;
+	height: 1.6rem;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+.vote_head img{
+	width: 100%;
+	height: 100%;
+}
+.vote_write{
+	width: 100%;
+	height: .26rem;
+	font-size: .26rem;
+	line-height: .26rem;
+	color: #fff;
+	margin-top: .56rem;
+}
+.vote_num{
+	width: 6.94rem;
+	height: 1.21rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.num_ul{
+	width: 100%;
+	height: inherit;
+	display: flex;
+	background: #ffffff;
+	border-radius: .15rem;
+	box-shadow: 0 .03rem .1rem .01rem #dddddd;
+}
+.num_ul li{
+	width: 33.3%;
+	height: inherit;
+	text-align: center;
+}
+.num_ul li p:nth-child(1){
+	margin: .24rem 0 .05rem 0;
+	font-size: .28rem;
+	color: #333333;
+	font-weight: bold;
+}
+.num_ul li p:nth-child(2){
+	font-size: .22rem;
+	color: #ff5c5c;
+	letter-spacing: .01rem;
+}
+
+/*参赛人*/
+.person{
+	width: 6.94rem;
+	height: 1.75rem;
+	margin: 0 auto;
+	padding-top: .25rem;
+}
+.person_top{
+	width: 100%;
+	height: .6rem;
+	padding: 0 .1rem;
+	font-size: .2rem;
+	color: #999999;
+}
+.person_head{
+	width: .6rem;
+	height: .6rem;
+	border-radius: 50%;
+}
+.person_head img{
+	width: 100%;
+	height: 100%;
+}
+.person_name{
+	width: 1.4rem;
+	height: .6rem;
+	padding-left: .18rem;
+}
+.person_name p{
+	height: .2rem;
+	line-height: .2rem;
+}
+.person p:nth-child(1){
+	margin: .07rem 0 .1rem 0;
+}
+.person_right{
+	width: 1.3rem;
+	height: inherit;
+	line-height: .6rem;
+	text-align: center;
+}
+.person_act{
+	width: 100%;
+	height: .43rem;
+	line-height: .43rem;
+	padding-left: .1rem;
+	font-size: .22rem;
+	color: #333;
+	font-weight: bold;
+}
+.person_pic{
+	width: 6.7rem;
+	height: 3.46rem;
+	margin: 0 auto;
+	border-radius: .15rem;
+}
+.person_pic img{
+	width: 100%;
+	height: 100%;
+}
+
+/*给他投票*/
+.person_button{
+	width: 100%;
+	height: .79rem;
+	position: fixed;
+	bottom: 1rem;
+	left: 0;
+}
+.vote_btn{
+	width:6.94rem;
+	height: .79rem;
+	background: #ff5c5c;
+	display: block;
+	bottom: 1rem;
+	color: #ffffff;
+	font-size: .34rem;
+	margin: 0 auto;
+	border-radius: .15rem;
+	text-align: center;
+	line-height: .79rem;
+}
+.shareto{ width:100%; padding:.8rem 0; background:#16bb5c; color:#fff; margin-top:2.5rem; float:left; font-size:1.2rem; text-align:center;}
+#cover{display:none;position:absolute;left:0;top:0;z-index:18888;background-color:#000000;opacity:0.7;}
+#guide{display:none;position:absolute;right:18px;top:5px;z-index:19999;}
+#guide img{width:260px;height:180px;}
+.person_button2{
+	width: 100%;
+	height: .79rem;
+	position: fixed;
+	bottom: 2rem;
+	left: 0;
+}
+.vote_btn2{
+	width:6.94rem;
+	height: .79rem;
+	background: #ff5c5c;
+	display: block;
+	bottom: 1rem;
+	color: #ffffff;
+	font-size: .34rem;
+	margin: 0 auto;
+	border-radius: .15rem;
+	text-align: center;
+	line-height: .79rem;
+}
+.loading{
+	width: 4rem;
+	height: .55rem;
+	border: .01rem solid #ADADAD;
+	font-size: .26rem;
+	color: #000;
+	text-align: center;
+	line-height: .55rem;
+	margin: 0 auto;
+	display: block;
+}
+.loading_box{
+	width: 100%;
+	height: auto;
+	display: none;
+}
+.tiaoZhuan{
+	width: 4rem;
+	height: .8rem;
+	font-size: .3rem;
+	text-align: center;
+	line-height: .8rem;
+	margin: .3rem auto;
+	display:block;
+	border-radius: 5px;
+	background-color: #31b0d5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.tiaoZhuan img{
+	width:0.5rem;
+	margin-right: 0.1rem;
+}
+.tiaoZhuan a{
+	color: #fff;
+}
+
+
+
+
+.nav {
+	width: 100%;
+	height: 1rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: #fff;
+}
+
+.nav ul {
+	width: 100%;
+	height: 1rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: .20rem;
+}
+
+.nav li {
+	text-align: center;
+}
+
+.nav li img {
+	width: .45rem;
+	height: .45rem;
+}
+
+.nav li a {
+	color: #333;
+}
+.sousuo{
+	width:100%;
+	height: .88rem;
+	text-align: center;
+	line-height: .88rem;
+}
+.sousuo .sousuo_in{
+	width: 6rem;
+	display: inline-block;
+	margin-top: .12rem;
+	border-radius: .60rem;
+	height: .60rem;
+	background-color:white;
+}
+.sousuo .sousuo_in input{
+	width: 80%;
+	height: 100%;
+	text-align: center;
+	line-height: 100%;
+	border: none;
+	float: left;
+	margin-left: .50rem;
+	outline: none;
+	font-size: 0.2em;
+}
+.sousuo  button{
+	width: .45rem;
+	height: .45rem;
+	border: none;
+	background-color: white;
+	outline: none;
+	line-height: 100%;
+	margin:auto;
+	
+}
+.sousuo  button img{
+	width: 100%;
+	height: 100%;
+	line-height: 100%;
+	background: #f3f3f3;
+}

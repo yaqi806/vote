@@ -1,0 +1,126 @@
+window.onload = function() {
+	document.addEventListener(
+		"touchstart",
+		function(e) {
+			e.preventDefault();
+		}
+	);
+	var wrap = document.querySelector(".slider");
+	var list = wrap.querySelector("ul");
+	list.innerHTML += list.innerHTML;
+	var lis = wrap.querySelectorAll("ul li");
+	var css = document.querySelector("#css");
+	var nav = wrap.querySelectorAll("nav span");
+	var style = "";
+	var timer = 0;
+	style += ".slider-loop{width:" + lis.length + "00%}";
+	style += ".slider-loop li{width:" + (1 / lis.length * 100) + "%}"
+	css.innerHTML += style;
+	var startPoint = 0;
+	var startX = 0;
+	var now = 0;
+	cssTransform(list, "translateX", 0);
+	auto();
+	wrap.addEventListener(
+		"touchstart",
+		function(e) {
+			clearInterval(timer);
+			list.style.transition = "none";
+			var translateX = cssTransform(list, "translateX");
+			now = Math.round(-translateX / wrap.offsetWidth);
+			if(now == 0) {
+				now = nav.length;
+			}
+			if(now == lis.length - 1) {
+				now = nav.length - 1;
+			}
+			cssTransform(list, "translateX", -now * wrap.offsetWidth);
+			startPoint = e.changedTouches[0].pageX;
+			startX = cssTransform(list, "translateX");
+		}
+	);
+	wrap.addEventListener(
+		"touchmove",
+		function(e) {
+			var nowPoint = e.changedTouches[0].pageX;
+			var dis = nowPoint - startPoint;
+			cssTransform(list, "translateX", startX + dis);
+		}
+	);
+	wrap.addEventListener(
+		"touchend",
+		function(e) {
+			var translateX = cssTransform(list, "translateX");
+			now = Math.round(-translateX / wrap.offsetWidth);
+			tab();
+			auto();
+		}
+	);
+
+	function auto() {
+		clearInterval(timer);
+		timer = setInterval(
+			function() {
+				if(now == lis.length - 1) {
+					now = nav.length - 1;
+				}
+				list.style.transition = "none";
+				cssTransform(list, "translateX", -now * wrap.offsetWidth);
+				setTimeout(
+					function() {
+						now++;
+						tab();
+					}, 30
+				);
+			}, 2000
+		);
+	}
+
+	function tab() {
+		list.style.transition = ".5s";
+		cssTransform(list, "translateX", -now * wrap.offsetWidth);
+		for(var i = 0; i < nav.length; i++) {
+			nav[i].className = "";
+		}
+		nav[now % nav.length].className = "active";
+	}
+
+	function cssTransform(el, attr, val) {
+		if(!el.transform) {
+			el.transform = {};
+		}
+		if(arguments.length > 2) {
+			el.transform[attr] = val;
+			var sVal = "";
+			for(var s in el.transform) {
+				switch(s) {
+					case "rotate":
+					case "skewX":
+					case "skewY":
+						sVal += s + "(" + el.transform[s] + "deg) ";
+						break;
+					case "translateX":
+					case "translateY":
+						sVal += s + "(" + el.transform[s] + "px) ";
+						break;
+					case "scaleX":
+					case "scaleY":
+					case "scale":
+						sVal += s + "(" + el.transform[s] + ") ";
+						break;
+				}
+				el.style.WebkitTransform = el.style.transform = sVal;
+			}
+		} else {
+			val = el.transform[attr];
+			if(typeof val == "undefined") {
+				if(attr == "scale" || attr == "scaleX" || attr == "scaleY") {
+					val = 1;
+				} else {
+					val = 0;
+				}
+			}
+			return val;
+		}
+	}
+};

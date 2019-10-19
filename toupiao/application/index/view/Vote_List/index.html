@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>获奖列表</title>
+		<script src="__STATIC__/js/font.js"></script>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="__STATIC__/css/list.css"/>
+	</head>
+	<body>
+		{foreach name='winers' item='vo' empty="<center style='font-size: 5em;margin-top: 5em;color: #c0c0c0;'>暂时没人获奖</center>"}
+		<div class="box">
+			<p class="p1">第{$vo.w_pici}阶段</p>
+			<img src="{$vo.p_photo}"/>
+			<div class="box_xm">
+				<p class="fl">姓名：{$vo.p_name}</p>
+				<p class="fr">编号：{$vo.p_num}</p>
+			</div>
+		</div>
+		<div class="piao">
+			<div class="piao_in">
+				<p class="fl">现有票数 <span>{$vo.p_tnum}</span></p>
+				<p class="fr">获奖票数<span>{$vo.w_num}</span></p>
+			</div>
+		</div>
+		<div class="shi_jian">
+			<p>获奖时间：{$vo.w_ctime|date="Y-m-d H:i:s",###}</p>
+		</div>
+		{/foreach}
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="{:url('Index/index')}">
+						<img src="__STATIC__/img/index.png"/>
+						<p>首页</p>
+					</a>
+				</li>
+				<li>
+					<a href="{:url('Ranking/index')}">
+						<img src="__STATIC__/img/paihang.png"/>
+						<p>排行</p>
+					</a>
+				</li>
+				<li>
+					<a href="{:url('Rule/index')}">
+						<img src="__STATIC__/img/guize.png"/>
+						<p>活动规则</p>
+					</a>
+				</li>
+				<li>
+					<a href="{:url('VoteList/index')}">
+						<img src="__STATIC__/img/liebiao.png"/>
+						<p>获奖列表</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
