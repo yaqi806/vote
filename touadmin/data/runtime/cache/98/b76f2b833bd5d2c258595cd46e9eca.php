@@ -1,0 +1,4 @@
+<?php
+//000000000000
+ exit();?>
+think_serialize:a:1:{s:7:"265vote";a:7:{s:4:"icon";s:7:"ticket ";s:2:"id";s:7:"265vote";s:4:"name";s:12:"投票管理";s:6:"parent";s:0:"";s:3:"url";s:50:"/touadmin/public/index.php/vote/index/default.html";s:4:"lang";s:18:"VOTE_INDEX_DEFAULT";s:5:"items";a:2:{s:7:"266vote";a:6:{s:4:"icon";s:8:"fa-list ";s:2:"id";s:7:"266vote";s:4:"name";s:12:"选手列表";s:6:"parent";i:265;s:3:"url";s:48:"/touadmin/public/index.php/vote/index/index.html";s:4:"lang";s:16:"VOTE_INDEX_INDEX";}s:7:"267vote";a:6:{s:4:"icon";s:15:"fa-check-circle";s:2:"id";s:7:"267vote";s:4:"name";s:12:"人员审核";s:6:"parent";i:265;s:3:"url";s:49:"/touadmin/public/index.php/vote/index/shenhe.html";s:4:"lang";s:17:"VOTE_INDEX_SHENHE";}}}}
