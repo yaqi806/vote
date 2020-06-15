@@ -18,6 +18,7 @@ class Ranking extends Base
         $rankarr = $playerModel ->Ranking();
         $this ->assign('rankarr',$rankarr);
         return view('index1');
+        //修改了
     }
 
     /**
